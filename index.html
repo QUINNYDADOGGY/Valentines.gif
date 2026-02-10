@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine?</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(#ffd6e8, #ffeef6);
+    font-family: 'Comic Sans MS', 'Poppins', cursive;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    background: #fff0f6;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(255, 105, 180, 0.3);
+    text-align: center;
+    z-index: 10;
+  }
+
+  h1 {
+    color: #ff5fa2;
+    font-size: 2.5rem;
+  }
+
+  p {
+    color: #ff85b3;
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    margin-top: 30px;
+  }
+
+  button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+  }
+
+  .yes {
+    background: #ff7eb9;
+    color: white;
+  }
+
+  .no {
+    background: #ffd1e8;
+    color: #ff5fa2;
+  }
+
+  .yippee {
+    display: none;
+    font-size: 3rem;
+    margin-top: 20px;
+    animation: pop 0.6s ease-out;
+  }
+
+  @keyframes pop {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+
+  /* Floating teddy bears */
+  .float {
+    position: absolute;
+    animation: floatUp 12s linear infinite;
+    opacity: 0.7;
+  }
+
+  @keyframes floatUp {
+    from {
+      transform: translateY(110vh) rotate(0deg);
+    }
+    to {
+      transform: translateY(-10vh) rotate(360deg);
+    }
+  }
+
+  /* Crawling cats */
+  .cat {
+    position: absolute;
+    bottom: 20px;
+    font-size: 2rem;
+    animation: crawl 10s linear infinite;
+  }
+
+  @keyframes crawl {
+    from { left: -10%; }
+    to { left: 110%; }
+  }
+
+  .lick {
+    animation: lick 1s infinite alternate;
+  }
+
+  @keyframes lick {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(10deg); }
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating teddy bears -->
+<span class="float" style="left:10%; animation-duration: 14s;">🧸</span>
+<span class="float" style="left:30%; animation-duration: 10s;">🧸</span>
+<span class="float" style="left:60%; animation-duration: 16s;">🧸</span>
+<span class="float" style="left:80%; animation-duration: 12s;">🧸</span>
+
+<!-- Crawling cats -->
+<div class="cat lick" style="animation-duration: 12s;">🐱</div>
+<div class="cat lick" style="animation-duration: 9s; bottom: 60px;">🐈</div>
+<div class="cat lick" style="animation-duration: 11s; bottom: 100px;">😺</div>
+
+<div class="card">
+  <h1>Hi my love 💕</h1>
+  <p>Can I be your Valentine’s date?</p>
+
+  <div class="buttons">
+    <button class="yes" onclick="sayYes()">YES 💖</button>
+    <button class="no" onclick="moveNo()">NO 🙈</button>
+  </div>
+
+  <div class="yippee" id="yippee">
+    🎉😺 YIPPEEEEE!!! 😺🎉<br>
+    I’m your Valentine 💘
+  </div>
+</div>
+
+<script>
+  function sayYes() {
+    document.getElementById("yippee").style.display = "block";
+  }
+
+  function moveNo() {
+    const btn = document.querySelector(".no");
+    btn.style.position = "absolute";
+    btn.style.left = Math.random() * 80 + "%";
+    btn.style.top = Math.random() * 80 + "%";
+  }
+</script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
